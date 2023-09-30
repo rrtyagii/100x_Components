@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Components</title>
+    <link rel="stylesheet" href="/dist/output.css">
+    <style>
+        input:valid ~ img{
+            visibility: visible;
+        }
+
+        input:invalid ~ img{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body class="bg-neutral-1000">
+    <section class="flex flex-col m-5 p-5"> 
+        <fieldset class="flex-shrink-0 w-98 py-4 px-3 items-center gap-2.5 rounded-md border border-solid border-neutral-500 group focus-within:border-twitter-blue-default">
+            <legend class="text-neutral-500 font-medium font-['Inter'] text-xs group-focus-within:text-twitter-blue-default">
+                <div class="px-2">
+                    Email
+                </div>
+            </legend>
+            <div class="flex justify-around">
+                <input class="w-full peer font-normal font-['Inter'] text-xl text-neutral-100 border-none bg-transparent focus: outline-none placeholder:text-neutral-500" type="email" placeholder="Enter your e-mail">
+                <img class="invisible" src="/public/images/input-icon.svg" alt="validation image">
+            </div>
+        </fieldset>
+    </section>
+    
+    <section class="flex flex-row m-5 p-5">
+        <div class="flex-shrink-0 w-9 h-9 rounded-12.5rem bg-user-avatar bg-custom-gray bg-custom-position bg-cover bg-no-repeat"></div>
+        <div class=" ml-3 flex flex-row items-center self-stretch w-100 flex-shrink-0 align-baseline">
+            <input type="text" placeholder="What's happening?" class="bg-inherit caret-twitter-blue-default font-['Inter'] font-normal text-xl text-neutral-50 placeholder:text-neutral-600 focus:outline-none border-l-2 border-solid border-twitter-blue-default">
+        </div>
+    </section>
+
+    <!-- <section class="flex flex-row m-5 p-5">
+        <div class="flex items-start flex-shrink-0 w-80 h-10 rounded-6249.9375rem gap-4 py-3 pl-4 pr-60 bg-searchbar-fill border border-solid border-searchbar-fill group focus-within:border-twitter-blue-default align-middle">
+        <div class="flex-shrink-0 w-5 h-5 flex justify-center p-0.5 items-center bg-search-default group-focus-visible:bg-search-selected "></div>
+            <img class="" src="/public/images/dark-theme-search-default.svg" alt="dark-theme-search-default">
+            <input type="text" class="font-['Chirp'] font-normal text-neutral-50 placeholder:text-neutral-600 placeholder:font-['Chirp'] bg-inherit focus:outline-none" placeholder="Search">
+        </div>
+    </section> -->
+
+    <section class="flex flex-row m-5 p-5">
+        <div class="flex items-center flex-shrink-0 w-80 h-10 rounded-full gap-4 py-3 pl-4 pr-60 bg-searchbar-fill border border-solid border-searchbar-fill group focus-within:border-twitter-blue-default">
+            <img class="w-5 h-5 flex-shrink-0 flex justify-center items-center focus:fill-twitter-blue-default" src="/public/images/dark-theme-search-default.svg" alt="dark-theme-search-default">
+            <!-- <div class="flex-shrink-0 w-5 h-5 flex justify-center p-0.5 items-center bg-search-default peer-focus:bg-search-selected"></div> -->
+            <input type="text" class="peer font-['Chirp'] font-normal text-neutral-50 placeholder:text-neutral-600 placeholder:font-['Chirp'] bg-inherit focus:outline-none" placeholder="Search">
+        </div>
+    </section>
+</body>
+</html>
